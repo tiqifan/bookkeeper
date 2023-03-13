@@ -4,6 +4,19 @@
 
 from PySide6 import QtWidgets
 
+
+def add_del_buttons_widget(cls: QtWidgets.QWidget) -> QtWidgets.QWidget:
+    """
+    виджет с кнопками 'add' & 'delete'
+    """
+    buttons_widget = QtWidgets.QWidget()
+    buttons_layout = QtWidgets.QHBoxLayout()
+    buttons_layout.addWidget(cls.add_button)
+    buttons_layout.addWidget(cls.delete_button)
+    buttons_widget.setLayout(buttons_layout)
+    return buttons_widget
+
+
 class LabeledInput(QtWidgets.QWidget):
     """
     создание поля ввода
@@ -70,16 +83,6 @@ class HistoryTable(QtWidgets.QTableWidget):
             self.setVerticalHeaderLabels(rows)
         self.setHorizontalHeaderLabels(columns)
 
-    def add_del_buttons_widget(cls: QtWidgets.QWidget) -> QtWidgets.QWidget:
-        """
-        виджет с кнопками 'add' & 'delete'
-        """
-        buttons_widget = QtWidgets.QWidget()
-        buttons_layout = QtWidgets.QHBoxLayout()
-        buttons_layout.addWidget(cls.add_button)
-        buttons_layout.addWidget(cls.delete_button)
-        buttons_widget.setLayout(buttons_layout)
-        return buttons_widget
 
     def set_data(self, data: list[list[int | str]]) -> None:
         """
