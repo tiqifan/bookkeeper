@@ -4,7 +4,7 @@
 import sys
 from PySide6 import QtWidgets
 
-from bookkeeper.view.interface import MainWindow
+from bookkeeper.view.main_interface import MainWindow
 from bookkeeper.repository.sqlite_repository import SQLiteRepository
 
 from bookkeeper.models.category import Category
