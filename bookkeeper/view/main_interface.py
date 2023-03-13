@@ -5,9 +5,9 @@ from PySide6 import QtWidgets
 
 from bookkeeper.repository.abstract_repository import AbstractRepository
 
-from bookkeeper.view.categories_tab import CategoriesTab
-from bookkeeper.view.expense_tab import ExpenseTab
-from bookkeeper.view.budget_tab import BudgetTab
+from bookkeeper.view.category_widget import CategoriesTab
+from bookkeeper.view.expense_widget import ExpenseTab
+from bookkeeper.view.budget_widget import BudgetTab
 
 from bookkeeper.models.category import Category
 from bookkeeper.models.expense import Expense
